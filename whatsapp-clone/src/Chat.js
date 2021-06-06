@@ -4,6 +4,7 @@ import "./Chat.css"
 
 import { Avatar, IconButton } from "@material-ui/core";
 import { SearchOutlined, AttachFile, MoreVert } from '@material-ui/icons';
+import ChatMessage from "./ChatMessage";
 
 function Chat(){
 
@@ -33,6 +34,23 @@ function Chat(){
             </div>
         </div>
         <div className="chat__body">
+            <ChatMessage/>
+            <ChatMessage/>
+            <ChatMessage/>
+            <ChatMessage/>
+            <ChatMessage/>  
+            <ChatMessage/>  
+            <ChatMessage/>  
+            <ChatMessage/>  
+            <ChatMessage/>     
+            <ChatMessage/>  
+            <ChatMessage/>  
+            <ChatMessage/>  
+            <ChatMessage/>  
+            <ChatMessage/>  
+            <ChatMessage/>  
+            <ChatMessage/>  
+            <ChatMessage/>  
         </div>
         <div className="chat__footer">
 
