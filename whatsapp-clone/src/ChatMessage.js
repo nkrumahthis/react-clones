@@ -4,7 +4,7 @@ import "./ChatMessage.css"
 function ChatMessage() {
     return (
         <div className="chat__wrapper">
-            <div className="chat__bubble">
+            <div className={`chat__bubble ${true && 'chat__me'}`}>
                 <div class="chat__txt">
                     <p className="chat__name">Nkrumah Sarpong</p>
                     <p className="chat__message">Hey Guys</p>
