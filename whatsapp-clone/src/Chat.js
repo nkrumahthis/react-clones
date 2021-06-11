@@ -36,7 +36,6 @@ function Chat(){
 
     const sendMessage = (e) => {
         e.preventDefault();
-        console.log(`you typed ${input}`)
 
         db.collection('rooms').doc(roomId).collection('messages').add({
             message: input,
