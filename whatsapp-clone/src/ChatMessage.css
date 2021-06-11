@@ -56,19 +56,6 @@
   border-bottom: 8px solid transparent;
   left: -8px;
   top: 0px;
-
-
-}
-
-.chat__alt:after{
-    content: '';
-    position: absolute;
-    border: 0 solid transparent;
-    border-top: 9px solid #f5f5f5;
-    border-radius: 0 20px 0;
-    width: 15px;
-    height: 30px;
-    transform: rotate(145deg);
 }
 
 .chat__me{
@@ -86,10 +73,6 @@
     width: 0px;
     height: 0px;
     position: absolute;
-    /* border-left: 8px solid #dcf8c6;
-    border-right: 4px solid transparent;
-    border-top: 12px solid #dcf8c6;
-    border-bottom: 8px solid transparent; */
     right: -8px;
     top: 0px;
     
