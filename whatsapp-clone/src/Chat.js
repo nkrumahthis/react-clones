@@ -2,18 +2,23 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Chat.css"
 import db from "./firebase";
+import firebase from 'firebase';
 
 import { Avatar, IconButton } from "@material-ui/core";
 import { SearchOutlined, AttachFile, MoreVert, InsertEmoticon, Mic } from '@material-ui/icons';
 import ChatMessage from "./ChatMessage";
+import { useStateValue } from "./StateProvider";
+
+
 
 function Chat(){
 
     const [seed, setSeed] = useState("");
     const [input, setInput] = useState("");
-    const { roomId } = useParams();
-    const [ roomName, setRoomName ] = useState("");
+    const {roomId} = useParams();
+    const [roomName, setRoomName] = useState("");
     const [messages, setMessages] = useState([]);
+    const [{ user }, dispatch] = useStateValue();
 
     useEffect(()=>{
         if(roomId){
@@ -32,6 +37,13 @@ function Chat(){
     const sendMessage = (e) => {
         e.preventDefault();
         console.log(`you typed ${input}`)
+
+        db.collection('rooms').doc(roomId).collection('messages').add({
+            message: input,
+            name: user.displayName,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        })
+
         setInput("")
     }
 
@@ -53,9 +65,9 @@ function Chat(){
         </div>
         <div className="chat__body">
             {
-                messages.map(message=>(
+                messages.map((message, idx)=>(
                     <ChatMessage 
-                        key={message}
+                        key={idx}
                         name={message.name} 
                         message={message.message} 
                         timestamp={new Date(message.timestamp?.toDate()).toUTCString()}
