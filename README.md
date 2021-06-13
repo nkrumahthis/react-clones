@@ -1,12 +1,15 @@
-# react clones
+#Whatsapp Clone
 
-Tech uses:
+in React and Firebase
+
+(live)[https://clones-81b78.web.app]
+
+Techs used:
 
 - React
 - Firebase: Firestore Realtime db
 - Material UI
 - React Router
-- REact Context API
-- Redux
+- React Context API
 - Google Auth
-- Firebase Deploy
+- Firebase Deploy with Github CI
