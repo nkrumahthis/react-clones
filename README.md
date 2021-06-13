@@ -2,7 +2,7 @@
 
 in React and Firebase
 
-(live)[https://clones-81b78.web.app]
+[Live](https://clones-81b78.web.app)
 
 Techs used:
 
